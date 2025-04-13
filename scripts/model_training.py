@@ -98,3 +98,4 @@ plt.savefig(os.path.join(results_dir, "model_performance_comparison.png"))
 plt.show()
 
 print(f"Final best model saved with accuracy: {best_accuracy:.4f}")
+joblib.dump(best_model, 'models/best_ml_model.pkl', compress=3)
