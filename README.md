@@ -1,125 +1,71 @@
-Awesome! Here's your complete `README.md` file based on your project — **Airline Passenger Satisfaction Prediction App**:
+# ✈️ Airline Customer Satisfaction Predictor
 
----
+A machine learning application for predicting airline passenger satisfaction based on travel experiences and service ratings.
 
-```markdown
-# ✈️ Airline Passenger Satisfaction Prediction
+## Project Overview
 
-A machine learning web app built using **Streamlit** that predicts whether an airline passenger is satisfied based on their in-flight experience and travel details.
+This project analyzes airline customer feedback data to identify factors influencing passenger satisfaction. Using various Random Forest, the system predicts whether a customer will be satisfied with their travel experience based on service quality metrics, flight details, and passenger demographics.
 
----
-
-## 🌐 Live Demo
-
-👉 [Click here to try the app](https://stunning-invention-9v95jx47xjgfpwp4-8501.app.github.dev/)
-
----
-
-## 🧰 Features
-
-- Predict passenger satisfaction using trained ML model
-- Clean and user-friendly interface built with Streamlit
-- Data cleaning and preprocessing pipeline
-- Exploratory Data Analysis (EDA) with visual insights
-- Model training using Random Forest Classifier
-
----
-
-## 📁 Project Structure
+## Repository Structure
 
 ```
-airline_satisfaction/
-├── app.py                         # Main Streamlit app
-├── scripts/
-│   ├── data_cleaning.py          # Script to clean raw dataset
-│   ├── eda.py                    # Script for Exploratory Data Analysis
-│   └── model_training.py         # Trains and saves ML model
-├── models/
-│   └── satisfaction_model.pkl    # Saved model
-├── data/
-│   └── airline_data.csv          # Raw dataset
-├── requirements.txt              # Dependencies
-└── README.md                     # Project info (this file)
+AIRLINE/
+├── data/                            # Data files
+│   ├── Invistico_Airline.csv        # Original dataset
+│   └── processed_data.csv           # Preprocessed data
+├── models/                          # Saved ML artifacts
+│   ├── best_ml_model.pkl            # Optimized ML model
+│   ├── label_encoders.pkl           # Categorical encoders
+│   └── scaler.pkl                   # Feature scaler
+├── results/                         # Analysis outputs
+│   └── model_performance_comparison.png
+└── scripts/                         # Core code modules
+    ├── data_cleaning.py             # Data preprocessing
+    ├── exploratory_data_analysis.py # EDA visualizations  
+    ├── model_training.py            # Model selection & training
+    ├── run_all.py                   # Pipeline orchestration
 ```
 
----
-
-## ⚙️ Installation & Running the App
-
-### 1. Clone the Repository
+## Setup and Installation
 
 ```bash
-git clone https://github.com/Sujnan06/airline_satisfaction.git
-cd airline_satisfaction
-```
+# Clone repository
+git clone 
+cd airline
 
-### 2. Create & Activate Virtual Environment
-
-```bash
+# Create virtual environment
 python -m venv venv
-# Activate on Windows
-venv\Scripts\activate
-# Activate on Mac/Linux
-source venv/bin/activate
-```
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-### 3. Install Required Libraries
-
-```bash
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 4. Run the Streamlit App
+## Usage
 
 ```bash
+# Run the complete pipeline
+python scripts/run_all.py
+
+# Launch the Streamlit prediction interface
 streamlit run app.py
 ```
 
-Then open [http://localhost:8501](http://localhost:8501) in your browser.
+## Methodology
 
----
+The project follows a standard data science workflow:
 
-## 📊 Dataset
+1. **Data Preprocessing**: Handling missing values, encoding categorical variables
+2. **Exploratory Analysis**: Visualizing patterns and relationships in passenger feedback
+3. **Model Development**: Training and evaluating multiple classifiers (Random Forest, Logistic Regression, etc.)
+4. **Deployment**: Interactive web application for real-time predictions
 
-The dataset used is from Kaggle’s [Airline Passenger Satisfaction](https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction) — containing demographic and in-flight service details from real airline passengers.
+## Key Results
 
----
+The model successfully identifies the most significant factors affecting passenger satisfaction, achieving 96% prediction accuracy.
 
-## 🤖 Machine Learning Model
 
-- **Model Used**: Random Forest Classifier
-- **Tools**: scikit-learn, pandas, joblib
-- Trained using cleaned dataset and exported using `joblib` for fast inference
 
----
-
-## ✅ Requirements
-
-The main libraries used:
-
-- pandas  
-- numpy  
-- seaborn  
-- matplotlib  
-- scikit-learn  
-- joblib  
-- streamlit  
-
-(These are included in the `requirements.txt` file)
-
----
-
-## 🔐 License
-
-This project is licensed under the **MIT License** - feel free to use and modify.
-
----
-
-## 👤 Author
-
-**Sujnan**
-
-- GitHub: [@Sujnan06](https://github.com/Sujnan06)
-
----
+## Author
+Sujnan J Kalmady
 
